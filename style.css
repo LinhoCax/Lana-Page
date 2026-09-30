@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: red;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+p{
+    text-align: center;
+}
+
+button{
+    background-color: white;
+}
