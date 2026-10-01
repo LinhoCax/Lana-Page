@@ -1,17 +1,36 @@
 body {
-    background-color: black;
+    background-color: white;
     color: red;
-}
-
-h1{
-    text-align: center;
-    color: white;
-}
-
-p{
-    text-align: center;
 }
 
 button{
     background-color: white;
+}
+
+.titulo-principal {
+    font-family: 'Amperzand', serif;
+    font-size: 40px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+.sublinhado {
+    text-decoration: underline;
+    font-size: 20px;
+    vertical-align: 10px;
+}
+
+@font-face {
+    font-family: 'Amperzand';
+    src: url('fonts/Amperzand.ttf');
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
 }
