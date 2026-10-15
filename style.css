@@ -1,36 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: white;
-    color: red;
+  background-color: #f4f1eb;
+  color: #2c2c2c;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-button{
-    background-color: white;
+h2,h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: normal;
 }
 
-.titulo-principal {
-    font-family: 'Amperzand', serif;
-    font-size: 40px;
-    font-weight: 500;
-    font-style: italic;
+h1,header h1 {
+  font-family: "Amperzand", serif;
+  font-weight: normal;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+header p {
+  font-style: italic;
+  color: #555;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.logo-lana-container {
+    width: 100%;
+    max-width: 450px; 
+    margin: 0 auto 20px auto;
+    padding: 0 10px;
+}
+
+.logo-lana {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.area-busca {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+#input-busca {
+  width: 60%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+#input-busca:focus {
+  outline: none;
+  border-color: #1a1a1a;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Georgia", serif;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4cfc5;
+  padding-bottom: 10px;
+}
+
+.grid-albuns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+@keyframes aparecerCard {
+  from {
+    opacity: 0;
+    top: 40px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.card-album {
+    background: #fff; /* Fundo branco original */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     text-align: center;
+    position: relative;
+    cursor: pointer;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    
+    opacity: 0; 
+    animation: aparecerCard 0.6s ease-out forwards; 
 }
 
-.sublinhado {
-    text-decoration: underline;
-    font-size: 20px;
-    vertical-align: 10px;
+.card-album:hover {
+    transform: translateY(-10px) scale(1.06); 
+    
+    background-color: #ebe7de; 
+
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    z-index: 2;
 }
 
-@font-face {
-    font-family: 'Amperzand';
-    src: url('fonts/Amperzand.ttf');
+.card-album:hover img {
+    filter: sepia(20%) contrast(110%) brightness(85%);
 }
 
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    justify-content: center;
+.card-album img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    filter: sepia(20%) contrast(110%);
+    transition: filter 0.3s ease;
+}
+
+.card-album h3 {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.card-album p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+#tela-album {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#btn-voltar {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  margin-bottom: 30px;
+}
+
+#btn-voltar:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.cabecalho-album {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+#album-capa {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#album-titulo {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+#album-info-basica {
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.conteudo-album {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.bloco-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.bloco-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  color: #1a1a1a;
+}
+
+#album-sobre {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+#album-curiosidades {
+  padding-left: 20px;
+}
+
+#album-curiosidades li {
+  margin-bottom: 10px;
+}
+
+#album-musicas {
+  padding-left: 0;
+  column-count: 2;
+  column-gap: 40px;
+  list-style: none;
+  counter-reset: contador-faixas;
+}
+
+#album-musicas li {
+  counter-increment: contador-faixas;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(161, 12, 12, 0.15);
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+#album-musicas li::before {
+  content: counter(contador-faixas) ".";
+  color: #a10c0c;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 12px;
+  width: 25px;
+  text-align: right;
+}
+
+.plataformas {
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+}
+
+.link-plataforma {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 30px;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Georgia", serif;
+  transition: background-color 0.3s;
+}
+
+.link-plataforma:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .cabecalho-album {
+    flex-direction: column;
+    text-align: center;
+  }
+  #album-musicas {
+    column-count: 1;
+  }
+  .area-busca {
+    flex-direction: column;
+  }
+  #input-busca {
+    width: 100%;
+  }
 }

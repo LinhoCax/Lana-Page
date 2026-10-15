@@ -1,37 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LanaLinho</title>
-    <link rel="shortcut icon" href="LDR/lanalogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <div class = "cabecalho">
-    <h1 class="titulo-principal">
-        Lana <br> <span class="sublinhado">Del</span>Rey🍒
-    </h1>
-    <hr>
-    <p>
-        Aqui você terá acesso às melhores letras da nossa<br>
-        grande diva Lana Del Rey🍒.
-    </p>
-    </div>
-    
-    <div class = "galeria">
-    <img src="LDR/Lana-Del-Rey-DYKTTTUOB.jpg" alt="Capa do Did You Know That There is a Tunel Under Ocean Blvd?">
-    <img src="LDR/lana-del-rey-lust-for-life-redimencionada.jpg" alt="Capa do Lust For Life">
-    <img src="LDR/lanadelrey-Norman-redimencionada.jpg" alt="Capa do Norman Fucking Rockwell">
-    <img src="LDR/LanaDelRey_BornToDie-redimencionada.jpg" alt="Capa do Born to Die">
-    </div>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summertime Interlude Cinnamon Dealer</title>
 
-    <div class="selecao">
-    <p>Clique abaixo para selecionar uma das músicas disponíveis em nosso acervo!</p>
-    <button id="musica">
-        Clique aqui
-    </button>
-    </div>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Link para o Ícone da aba -->
+    <link rel="icon" href="LDR/Lana-Del-Rey-icone.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- ================= TELA INICIAL ================= -->
+    <section id="tela-inicial">
+      <header>
+        <div class="logo-lana-container">
+          <!-- Imagem da Logo -->
+          <img
+            src="LDR/Lana-Del-Rey-Logo.png"
+            alt="Lana Del Rey"
+            class="logo-lana"
+          />
+        </div>
+        <p class="subtitulo-lana">
+          Pesquise pelo nome de um álbum da Lana ou escolha uma das eras abaixo.
+        </p>
+      </header>
+
+      <!-- O resto do HTML (area-busca, lista-albuns, etc) continua igualzinho... -->
+
+      <div class="area-busca">
+        <!-- Coloquei alguns álbuns dela como exemplo no placeholder -->
+        <input
+          type="text"
+          id="input-busca"
+          placeholder="Ex: Born to Die, Ultraviolence..."
+        />
+        <button id="btn-buscar">Procurar</button>
+      </div>
+
+      <h2>Todos os Álbuns</h2>
+      <!-- Esta div vai receber os cards com as capas dos álbuns da Lana gerados pelo JavaScript -->
+      <div id="lista-albuns" class="grid-albuns"></div>
+    </section>
+
+    <!-- ================= TELA DO ÁLBUM ================= -->
+    <section id="tela-album" class="oculto">
+      <button id="btn-voltar">⬅ Voltar para a lista</button>
+
+      <div class="cabecalho-album">
+        <img id="album-capa" src="" alt="Capa do Álbum da Lana Del Rey" />
+        <div>
+          <h2 id="album-titulo">Nome do Álbum</h2>
+          <p id="album-info-basica">Ano de Lançamento</p>
+        </div>
+      </div>
+
+      <div class="conteudo-album">
+        <div class="bloco-info">
+          <h3>Sobre a Era</h3>
+          <p id="album-sobre"></p>
+        </div>
+
+        <div class="bloco-info">
+          <h3>Curiosidades</h3>
+          <ul id="album-curiosidades"></ul>
+        </div>
+
+        <div class="bloco-info">
+          <h3>Faixas</h3>
+          <ol id="album-musicas"></ol>
+        </div>
+
+        <div class="bloco-info plataformas">
+          <h3>Ouça nas plataformas:</h3>
+          <div id="album-links"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conectando o arquivo JavaScript -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
