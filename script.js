@@ -4,6 +4,7 @@ const albuns = [
     titulo: "Born to Die",
     ano: 2012,
     capa: "LDR/LanaDelRey - Born To Die.JPG",
+    audio: "Songs/DietMountainDew.m4A",
     sobre:
       "O segundo álbum de estúdio e estreia em uma grande gravadora. Mistura pop barroco, indie pop e trip hop, definindo a estética vintage americana.",
     curiosidades: ["O clipe de 'Video Games' foi editado pela própria Lana."],
@@ -23,15 +24,15 @@ const albuns = [
       "Ride",
       "American",
       "Cola",
-      "Body Eletric",,
+      "Body Eletric",
       "Blue Velvet",
       "Gods and monsters",
       "Yayo",
       "Bel Air",
     ],
     links: { spotify: "#", apple: "#" },
-    },
-    {
+  },
+  {
     id: "ultraviolence",
     titulo: "Ultraviolence",
     ano: 2014,
@@ -121,7 +122,7 @@ const albuns = [
     id: "nfr",
     titulo: "Norman Fucking Rockwell!",
     ano: 2019,
-    capa: "LDR/LanaDelRey - Norman.JPG", // Usando o nome exato do seu arquivo
+    capa: "LDR/LanaDelRey - Norman.JPG",
     sobre:
       "Aclamado pela crítica como a obra-prima de Lana. Com produção de Jack Antonoff, o álbum traz reflexões sobre o sonho americano em decadência.",
     curiosidades: ["Foi indicado a Álbum do Ano no Grammy de 2020."],
@@ -201,7 +202,7 @@ const albuns = [
     id: "ocean-blvd",
     titulo: "Did you know that there's a tunnel under Ocean Blvd",
     ano: 2023,
-    capa: "LDR/LanaDelRey - DYKTTTUOB.JPG", // Usando o nome exato do seu arquivo
+    capa: "LDR/LanaDelRey - DYKTTTUOB.JPG",
     sobre:
       "Profundamente espiritual e reflexivo, onde Lana aborda sua família, mortalidade e seu legado, trazendo corais gospel e interlúdios conversacionais.",
     curiosidades: [
@@ -234,31 +235,23 @@ const albuns = [
     curiosidades: [
       "Não sabemos o motivo exato dessas incriveis faixas terem sido descartadas, mas algumas aqui como Queen of Desaster fizeram grande sucesso",
     ],
-    musicas: [
-        "Quenn of Desaster",
-        "Bealtiful Payer",
-    ],
+    musicas: ["Quenn of Desaster", "Bealtiful Payer"],
     links: { spotify: "#", apple: "#" },
   },
 ];
 
-// O resto do código (referências, funções de renderizar, etc) continua intacto abaixo...
-
-// 2. Referências aos elementos do HTML
 const telaInicial = document.getElementById("tela-inicial");
 const telaAlbum = document.getElementById("tela-album");
 const divListaAlbuns = document.getElementById("lista-albuns");
 
-// 3. Função para desenhar os álbuns na tela inicial
 function renderizarAlbuns(lista) {
-  divListaAlbuns.innerHTML = ""; // Limpa o ecrã antes de desenhar
+  divListaAlbuns.innerHTML = "";
 
   if (lista.length === 0) {
     divListaAlbuns.innerHTML = "<p>Nenhum álbum encontrado com esse nome.</p>";
     return;
   }
 
-  // O "index" ajuda-nos a saber a posição do álbum (0, 1, 2, 3...)
   lista.forEach((album, index) => {
     const card = document.createElement("div");
     card.className = "card-album";
@@ -268,7 +261,6 @@ function renderizarAlbuns(lista) {
             <p>${album.ano}</p>
         `;
 
-    // Adiciona um atraso na animação com base na posição do álbum (0.1s, 0.2s, 0.3s...)
     card.style.animationDelay = `${index * 0.15}s`;
 
     card.addEventListener("click", () => abrirTelaAlbum(album));
@@ -277,60 +269,65 @@ function renderizarAlbuns(lista) {
   });
 }
 
-// 4. Função para abrir a tela de detalhes e preencher as informações
 function abrirTelaAlbum(album) {
   // Esconde a inicial, mostra a do álbum
   telaInicial.classList.add("oculto");
   telaAlbum.classList.remove("oculto");
 
-  // Preenche os textos e imagens
   document.getElementById("album-capa").src = album.capa;
   document.getElementById("album-titulo").textContent = album.titulo;
   document.getElementById("album-info-basica").textContent =
     `Lançamento: ${album.ano}`;
   document.getElementById("album-sobre").textContent = album.sobre;
 
-  // Preenche a lista de curiosidades
   const ulCuriosidades = document.getElementById("album-curiosidades");
-  ulCuriosidades.innerHTML = ""; // Limpa antes de preencher
+  ulCuriosidades.innerHTML = "";
   album.curiosidades.forEach((curiosidade) => {
     const li = document.createElement("li");
     li.textContent = curiosidade;
     ulCuriosidades.appendChild(li);
   });
 
-  // Preenche a lista de músicas
   const olMusicas = document.getElementById("album-musicas");
-  olMusicas.innerHTML = ""; // Limpa antes de preencher
+  olMusicas.innerHTML = "";
   album.musicas.forEach((musica) => {
     const li = document.createElement("li");
     li.textContent = musica;
     olMusicas.appendChild(li);
   });
 
-  // Preenche os links das plataformas
   const divLinks = document.getElementById("album-links");
   divLinks.innerHTML = `
         <a href="${album.links.spotify}" target="_blank" class="link-plataforma">Spotify</a>
         <a href="${album.links.apple}" target="_blank" class="link-plataforma">Apple Music</a>
     `;
+
+  const audioElemento = document.getElementById("album-audio");
+  const audioSource = document.getElementById("audio-source");
+
+  if (album.audio) {
+    audioSource.src = album.audio;
+    audioElemento.load();
+    audioElemento.style.display = "block";
+  } else {
+    audioElemento.style.display = "none";
+  }
 }
 
-// 5. Configurando o botão Voltar
 document.getElementById("btn-voltar").addEventListener("click", () => {
-  // Esconde a tela do álbum, mostra a tela inicial
   telaAlbum.classList.add("oculto");
   telaInicial.classList.remove("oculto");
 
-  // Opcional: rola a página pro topo
+  const audioElemento = document.getElementById("album-audio");
+  audioElemento.pause();
+  audioElemento.currentTime = 0;
+
   window.scrollTo(0, 0);
 });
 
-// 6. Configurando a Busca
 const btnBuscar = document.getElementById("btn-buscar");
 const inputBusca = document.getElementById("input-busca");
 
-// Função que faz o filtro
 function fazerBusca() {
   const termo = inputBusca.value.toLowerCase();
   const albunsFiltrados = albuns.filter((album) =>
@@ -339,11 +336,8 @@ function fazerBusca() {
   renderizarAlbuns(albunsFiltrados);
 }
 
-// Quando clica no botão "Procurar"
 btnBuscar.addEventListener("click", fazerBusca);
 
-// E também pesquisa automaticamente conforme o usuário digita
 inputBusca.addEventListener("input", fazerBusca);
 
-// 7. Inicializa o site desenhando a lista completa de álbuns
 renderizarAlbuns(albuns);

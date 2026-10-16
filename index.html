@@ -7,15 +7,12 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Link para o Ícone da aba -->
     <link rel="icon" href="LDR/Lana-Del-Rey-icone.ico" type="image/x-icon" />
   </head>
   <body>
-    <!-- ================= TELA INICIAL ================= -->
     <section id="tela-inicial">
       <header>
         <div class="logo-lana-container">
-          <!-- Imagem da Logo -->
           <img
             src="LDR/Lana-Del-Rey-Logo.png"
             alt="Lana Del Rey"
@@ -27,10 +24,7 @@
         </p>
       </header>
 
-      <!-- O resto do HTML (area-busca, lista-albuns, etc) continua igualzinho... -->
-
       <div class="area-busca">
-        <!-- Coloquei alguns álbuns dela como exemplo no placeholder -->
         <input
           type="text"
           id="input-busca"
@@ -40,11 +34,10 @@
       </div>
 
       <h2>Todos os Álbuns</h2>
-      <!-- Esta div vai receber os cards com as capas dos álbuns da Lana gerados pelo JavaScript -->
+
       <div id="lista-albuns" class="grid-albuns"></div>
     </section>
 
-    <!-- ================= TELA DO ÁLBUM ================= -->
     <section id="tela-album" class="oculto">
       <button id="btn-voltar">⬅ Voltar para a lista</button>
 
@@ -75,11 +68,17 @@
         <div class="bloco-info plataformas">
           <h3>Ouça nas plataformas:</h3>
           <div id="album-links"></div>
+
+          <div class="reprodutor-container">
+            <p class="titulo-audio">Trecho em destaque:</p>
+            <audio id="album-audio" controls>
+              <source id="audio-source" src="" type="audio/mpeg" />
+              O seu navegador não suporta o elemento de áudio.
+            </audio>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- Conectando o arquivo JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
