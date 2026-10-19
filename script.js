@@ -5,6 +5,7 @@ const albuns = [
     ano: 2012,
     capa: "LDR/LanaDelRey - Born To Die.JPG",
     audio: "Songs/DietMountainDew.m4A",
+    letra: "You're no good for me, baby, you're no good for me<br>You're no good for me, baby, you're no good for me<br>Diet Mountain Dew, baby, New York City<br>Never was there ever a girl so pretty<br>Do you think we'll be in love forever?<br>Do you think we'll be in love?",
     sobre:
       "O segundo álbum de estúdio e estreia em uma grande gravadora. Mistura pop barroco, indie pop e trip hop, definindo a estética vintage americana.",
     curiosidades: ["O clipe de 'Video Games' foi editado pela própria Lana."],
@@ -233,7 +234,7 @@ const albuns = [
     capa: "LDR/LanaDelRey - Unreleased.jpg",
     sobre: "Todas as musicas que foram descartadas.",
     curiosidades: [
-      "Não sabemos o motivo exato dessas incriveis faixas terem sido descartadas, mas algumas aqui como Queen of Desaster fizeram grande sucesso",
+      "Não sabemos o motivo exato dessas incriveis faixas terem sido descartadas, mas algumas aqui como Queen of Desaster fizeram grande sucesso.",
     ],
     musicas: ["Quenn of Desaster", "Bealtiful Payer"],
     links: { spotify: "#", apple: "#" },
@@ -270,7 +271,7 @@ function renderizarAlbuns(lista) {
 }
 
 function abrirTelaAlbum(album) {
-  // Esconde a inicial, mostra a do álbum
+
   telaInicial.classList.add("oculto");
   telaAlbum.classList.remove("oculto");
 
@@ -295,6 +296,20 @@ function abrirTelaAlbum(album) {
     li.textContent = musica;
     olMusicas.appendChild(li);
   });
+
+    const btnLetra = document.getElementById('btn-letra');
+    const caixaLetra = document.getElementById('caixa-letra');
+    const textoLetra = document.getElementById('texto-letra');
+    
+    caixaLetra.classList.add('oculto'); 
+    btnLetra.textContent = "Ler Letra";
+
+    if (album.letra) {
+        btnLetra.classList.remove('oculto');
+        textoLetra.innerHTML = album.letra;
+    } else {
+        btnLetra.classList.add('oculto');
+    }
 
   const divLinks = document.getElementById("album-links");
   divLinks.innerHTML = `
@@ -341,3 +356,27 @@ btnBuscar.addEventListener("click", fazerBusca);
 inputBusca.addEventListener("input", fazerBusca);
 
 renderizarAlbuns(albuns);
+
+const btnTema = document.getElementById('btn-tema');
+
+btnTema.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    if (document.body.classList.contains('dark-mode')) {
+        btnTema.textContent = '☀️ Modo Claro';
+    } else {
+        btnTema.textContent = '🌙 Modo Escuro';
+    }
+});
+
+document.getElementById('btn-letra').addEventListener('click', (e) => {
+    const caixaLetra = document.getElementById('caixa-letra');
+    
+    if (caixaLetra.classList.contains('oculto')) {
+        caixaLetra.classList.remove('oculto');
+        e.target.textContent = "Ocultar Letra";
+    } else {
+        caixaLetra.classList.add('oculto');
+        e.target.textContent = "Ler Letra";
+    }
+});

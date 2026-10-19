@@ -361,3 +361,97 @@ audio {
     width: 100%;
   }
 }
+
+.btn-tema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.btn-tema:hover {
+    background: #1a1a1a;
+    color: #f4f1eb;
+}
+
+#btn-letra {
+    margin-top: 15px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    background-color: transparent;
+    color: #a10c0c;
+    border: 1px solid #a10c0c;
+}
+
+#btn-letra:hover {
+    background-color: #a10c0c;
+    color: #fff;
+}
+
+#caixa-letra {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: rgba(161, 12, 12, 0.05);
+    border-left: 3px solid #a10c0c;
+    border-radius: 0 8px 8px 0;
+    width: 100%;
+    max-width: 500px;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn-tema {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
+body.dark-mode .btn-tema:hover {
+    background: #e0e0e0;
+    color: #121212;
+}
+
+body.dark-mode .card-album,
+body.dark-mode .bloco-info {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .card-album:hover {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
+body.dark-mode .subtitulo-lana, body.dark-mode .titulo-audio {
+    color: #f4f1eb;
+}
+
+body.dark-mode #album-musicas li {
+    color: #ccc;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode #btn-voltar {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
+body.dark-mode #btn-voltar:hover {
+    background: #e0e0e0;
+    color: #121212;
+}
