@@ -6,10 +6,12 @@
     <title>Summertime Interlude Cinnamon Dealer</title>
 
     <link rel="stylesheet" href="style.css" />
-
     <link rel="icon" href="LDR/Lana-Del-Rey-icone.ico" type="image/x-icon" />
   </head>
   <body>
+  
+    <button id="btn-tema" class="btn-tema">🌙 Modo Escuro</button>
+
     <section id="tela-inicial">
       <header>
         <div class="logo-lana-container">
@@ -69,8 +71,6 @@
           <h3>Ouça nas plataformas:</h3>
           <div id="album-links"></div>
 
-          <button id="btn-tema" class="btn-tema">🌙 Modo Escuro</button>
-
           <div class="reprodutor-container">
             <p class="titulo-audio">Trecho em destaque:</p>
             <audio id="album-audio" controls>
@@ -78,10 +78,9 @@
               O seu navegador não suporta o elemento de áudio.
             </audio>
             <button id="btn-letra" class="oculto">Ler Letra</button>
-              <div id="caixa-letra" class="oculto">
-            <p id="texto-letra"></p>
-        </div>
-    </div>
+            <div id="caixa-letra" class="oculto">
+              <p id="texto-letra"></p>
+            </div>
           </div>
         </div>
       </div>

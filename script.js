@@ -31,7 +31,11 @@ const albuns = [
       "Yayo",
       "Bel Air",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "", 
+      apple: "https://music.apple.com/br/album/born-to-die-paradise-edition-special-version/1442452465",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_l-ctFfmX5ZNI6UHw5GRxr8exRkZxBo7rQ",
+    },
   },
   {
     id: "ultraviolence",
@@ -55,11 +59,15 @@ const albuns = [
       "Fucked My Way Up To The Top",
       "Old Money",
       "The Other Woman",
-      "Black Bealty",
+      "Black Beauty",
       "Guns and Roses",
       "Florida Kilos",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/album/ultraviolence-deluxe/1440818509",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_lJHHV-5_rgXJmwq2exg7lfq1yQ1W2bf_g",
+    },
   },
   {
     id: "honeymoon",
@@ -85,9 +93,13 @@ const albuns = [
       "The Blackest Day",
       "24",
       "Swan Song",
-      "Don't Let Me Be Misuderstood",
+      "Don't Let Me Be Misunderstood",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/album/honeymoon/1440827260",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_mLThar64PDjVJybNAr0g-UAxXRa3ktcSA"
+    },
   },
   {
     id: "lust-for-life",
@@ -110,14 +122,18 @@ const albuns = [
       "In My Feelings",
       "Coachella - Woodstock In My Mind",
       "God Bless America - And All The Bealtiful Women In It",
-      "Wher The World Was At War We Kept Dancing",
-      "Beatiful People Beautiful Problems (part. Steven Nicks)",
-      "Tomorrow Never Came (part. Steve Nicks)",
+      "Where The World Was At War We Kept Dancing",
+      "Beautiful People Problems (part. Stevie Nicks)",
+      "Tomorrow Never Came (part. Stevie Nicks)",
       "Heroin",
       "Change",
       "Get Free",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/album/lust-for-life/1440899893",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_nW-nuyvdFiqxH03YLB-6j22DqEc3sRQp0",
+    },
   },
   {
     id: "nfr",
@@ -143,7 +159,11 @@ const albuns = [
       "Happiness Is A Butterfly",
       "Hope Is A Dangerous Thing For A Woman Like Me To Have - But I Have It",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/album/norman-fucking-rockwell/1474669063",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_kXEi_1ry11kHAe71Z36AShGLhVXejbK38"
+    },
   },
   {
     id: "chemtrails",
@@ -168,7 +188,11 @@ const albuns = [
       "Dance Till We Die",
       "For Free (part. Zella Day and Weyes Blood)",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/album/chemtrails-over-the-country-club/1545567745",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_kmEKSBdo7rCLJIuYp2o0N5nLPi2fiDOas",
+    },
   },
   {
     id: "blue-banisters",
@@ -197,7 +221,11 @@ const albuns = [
       "Cherry Blossom",
       "Sweet Carolina",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/album/blue-banisters/1584675130",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_m-2ks002cbXbtfo6eWcet1QnlwO-my-mE",
+    },
   },
   {
     id: "ocean-blvd",
@@ -225,7 +253,11 @@ const albuns = [
       "Peppers (part. Tommy Genesis)",
       "Taco Truck x VB",
     ],
-    links: { spotify: "#", apple: "#" },
+    links: { 
+      spotify: "#", 
+      apple: "https://music.apple.com/br/artist/lana-del-rey/464296584",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_mVornEaauvDf9xIUpW7OmceH6_OwO_OoI",
+    },
   },
   {
     id: "unreleased",
@@ -236,8 +268,15 @@ const albuns = [
     curiosidades: [
       "Não sabemos o motivo exato dessas incriveis faixas terem sido descartadas, mas algumas aqui como Queen of Desaster fizeram grande sucesso.",
     ],
-    musicas: ["Quenn of Desaster", "Bealtiful Payer"],
-    links: { spotify: "#", apple: "#" },
+    musicas: [
+      "Queen of Disaster",
+      "Beautiful Payer",
+    ],
+    links: { 
+      spotify: "#", 
+      apple: "#",
+      youtube: "#",
+    },
   },
 ];
 
@@ -315,6 +354,7 @@ function abrirTelaAlbum(album) {
   divLinks.innerHTML = `
         <a href="${album.links.spotify}" target="_blank" class="link-plataforma">Spotify</a>
         <a href="${album.links.apple}" target="_blank" class="link-plataforma">Apple Music</a>
+        <a href="${album.links.youtube}" tatget="_blank" class="link-plataforma">YouTube Music</a>
     `;
 
   const audioElemento = document.getElementById("album-audio");
