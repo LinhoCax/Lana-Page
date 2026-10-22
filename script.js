@@ -5,7 +5,8 @@ const albuns = [
     ano: 2012,
     capa: "LDR/LanaDelRey - Born To Die.JPG",
     audio: "Songs/DietMountainDew.m4A",
-    letra: "You're no good for me, baby, you're no good for me<br>You're no good for me, baby, you're no good for me<br>Diet Mountain Dew, baby, New York City<br>Never was there ever a girl so pretty<br>Do you think we'll be in love forever?<br>Do you think we'll be in love?",
+    letra:
+      "You're no good for me, baby, you're no good for me<br>You're no good for me, baby, you're no good for me<br>Diet Mountain Dew, baby, New York City<br>Never was there ever a girl so pretty<br>Do you think we'll be in love forever?<br>Do you think we'll be in love?",
     sobre:
       "O segundo álbum de estúdio e estreia em uma grande gravadora. Mistura pop barroco, indie pop e trip hop, definindo a estética vintage americana.",
     curiosidades: ["O clipe de 'Video Games' foi editado pela própria Lana."],
@@ -31,10 +32,12 @@ const albuns = [
       "Yayo",
       "Bel Air",
     ],
-    links: { 
-      spotify: "", 
-      apple: "https://music.apple.com/br/album/born-to-die-paradise-edition-special-version/1442452465",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_l-ctFfmX5ZNI6UHw5GRxr8exRkZxBo7rQ",
+    links: {
+      spotify: "https://open.spotify.com/album/4X8hCUFW6NMzzQEgA2KhnH",
+      apple:
+        "https://music.apple.com/br/album/born-to-die-paradise-edition-special-version/1442452465",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_l-ctFfmX5ZNI6UHw5GRxr8exRkZxBo7rQ",
     },
   },
   {
@@ -63,10 +66,11 @@ const albuns = [
       "Guns and Roses",
       "Florida Kilos",
     ],
-    links: { 
-      spotify: "#", 
+    links: {
+      spotify: "#",
       apple: "https://music.apple.com/br/album/ultraviolence-deluxe/1440818509",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_lJHHV-5_rgXJmwq2exg7lfq1yQ1W2bf_g",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_lJHHV-5_rgXJmwq2exg7lfq1yQ1W2bf_g",
     },
   },
   {
@@ -95,10 +99,11 @@ const albuns = [
       "Swan Song",
       "Don't Let Me Be Misunderstood",
     ],
-    links: { 
-      spotify: "#", 
+    links: {
+      spotify: "https://open.spotify.com/album/1WFTG46KqcJokHQcc8OsCE",
       apple: "https://music.apple.com/br/album/honeymoon/1440827260",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_mLThar64PDjVJybNAr0g-UAxXRa3ktcSA"
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_mLThar64PDjVJybNAr0g-UAxXRa3ktcSA",
     },
   },
   {
@@ -129,10 +134,11 @@ const albuns = [
       "Change",
       "Get Free",
     ],
-    links: { 
-      spotify: "#", 
+    links: {
+      spotify: "https://open.spotify.com/album/2ZTb03OQ20m2Tz20Cihr7w",
       apple: "https://music.apple.com/br/album/lust-for-life/1440899893",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_nW-nuyvdFiqxH03YLB-6j22DqEc3sRQp0",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_nW-nuyvdFiqxH03YLB-6j22DqEc3sRQp0",
     },
   },
   {
@@ -159,10 +165,12 @@ const albuns = [
       "Happiness Is A Butterfly",
       "Hope Is A Dangerous Thing For A Woman Like Me To Have - But I Have It",
     ],
-    links: { 
-      spotify: "#", 
-      apple: "https://music.apple.com/br/album/norman-fucking-rockwell/1474669063",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_kXEi_1ry11kHAe71Z36AShGLhVXejbK38"
+    links: {
+      spotify: "https://open.spotify.com/album/7xYiTrbTL57QO0bb4hXIKo",
+      apple:
+        "https://music.apple.com/br/album/norman-fucking-rockwell/1474669063",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_kXEi_1ry11kHAe71Z36AShGLhVXejbK38",
     },
   },
   {
@@ -188,10 +196,12 @@ const albuns = [
       "Dance Till We Die",
       "For Free (part. Zella Day and Weyes Blood)",
     ],
-    links: { 
-      spotify: "#", 
-      apple: "https://music.apple.com/br/album/chemtrails-over-the-country-club/1545567745",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_kmEKSBdo7rCLJIuYp2o0N5nLPi2fiDOas",
+    links: {
+      spotify: "https://open.spotify.com/album/5XpEKORZ4y6OrCZSKma46A",
+      apple:
+        "https://music.apple.com/br/album/chemtrails-over-the-country-club/1545567745",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_kmEKSBdo7rCLJIuYp2o0N5nLPi2fiDOas",
     },
   },
   {
@@ -221,10 +231,11 @@ const albuns = [
       "Cherry Blossom",
       "Sweet Carolina",
     ],
-    links: { 
-      spotify: "#", 
+    links: {
+      spotify: "https://open.spotify.com/album/2NpEkuD9QzcwRDZZkjuHUo",
       apple: "https://music.apple.com/br/album/blue-banisters/1584675130",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_m-2ks002cbXbtfo6eWcet1QnlwO-my-mE",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_m-2ks002cbXbtfo6eWcet1QnlwO-my-mE",
     },
   },
   {
@@ -253,10 +264,11 @@ const albuns = [
       "Peppers (part. Tommy Genesis)",
       "Taco Truck x VB",
     ],
-    links: { 
-      spotify: "#", 
+    links: {
+      spotify: "https://open.spotify.com/album/5HOHne1wzItQlIYmLXLyfZ",
       apple: "https://music.apple.com/br/artist/lana-del-rey/464296584",
-      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_mVornEaauvDf9xIUpW7OmceH6_OwO_OoI",
+      youtube:
+        "https://music.youtube.com/playlist?list=OLAK5uy_mVornEaauvDf9xIUpW7OmceH6_OwO_OoI",
     },
   },
   {
@@ -268,12 +280,9 @@ const albuns = [
     curiosidades: [
       "Não sabemos o motivo exato dessas incriveis faixas terem sido descartadas, mas algumas aqui como Queen of Desaster fizeram grande sucesso.",
     ],
-    musicas: [
-      "Queen of Disaster",
-      "Beautiful Payer",
-    ],
-    links: { 
-      spotify: "#", 
+    musicas: ["Queen of Disaster", "Beautiful Payer"],
+    links: {
+      spotify: "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa",
       apple: "#",
       youtube: "#",
     },
@@ -310,7 +319,6 @@ function renderizarAlbuns(lista) {
 }
 
 function abrirTelaAlbum(album) {
-
   telaInicial.classList.add("oculto");
   telaAlbum.classList.remove("oculto");
 
@@ -336,25 +344,25 @@ function abrirTelaAlbum(album) {
     olMusicas.appendChild(li);
   });
 
-    const btnLetra = document.getElementById('btn-letra');
-    const caixaLetra = document.getElementById('caixa-letra');
-    const textoLetra = document.getElementById('texto-letra');
-    
-    caixaLetra.classList.add('oculto'); 
-    btnLetra.textContent = "Ler Letra";
+  const btnLetra = document.getElementById("btn-letra");
+  const caixaLetra = document.getElementById("caixa-letra");
+  const textoLetra = document.getElementById("texto-letra");
 
-    if (album.letra) {
-        btnLetra.classList.remove('oculto');
-        textoLetra.innerHTML = album.letra;
-    } else {
-        btnLetra.classList.add('oculto');
-    }
+  caixaLetra.classList.add("oculto");
+  btnLetra.textContent = "Ler Letra";
+
+  if (album.letra) {
+    btnLetra.classList.remove("oculto");
+    textoLetra.innerHTML = album.letra;
+  } else {
+    btnLetra.classList.add("oculto");
+  }
 
   const divLinks = document.getElementById("album-links");
   divLinks.innerHTML = `
         <a href="${album.links.spotify}" target="_blank" class="link-plataforma">Spotify</a>
         <a href="${album.links.apple}" target="_blank" class="link-plataforma">Apple Music</a>
-        <a href="${album.links.youtube}" tatget="_blank" class="link-plataforma">YouTube Music</a>
+        <a href="${album.links.youtube}" target="_blank" class="link-plataforma">YouTube Music</a>
     `;
 
   const audioElemento = document.getElementById("album-audio");
@@ -397,26 +405,26 @@ inputBusca.addEventListener("input", fazerBusca);
 
 renderizarAlbuns(albuns);
 
-const btnTema = document.getElementById('btn-tema');
+const btnTema = document.getElementById("btn-tema");
 
-btnTema.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        btnTema.textContent = '☀️ Modo Claro';
-    } else {
-        btnTema.textContent = '🌙 Modo Escuro';
-    }
+btnTema.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    btnTema.textContent = "☀️ Modo Claro";
+  } else {
+    btnTema.textContent = "🌙 Modo Escuro";
+  }
 });
 
-document.getElementById('btn-letra').addEventListener('click', (e) => {
-    const caixaLetra = document.getElementById('caixa-letra');
-    
-    if (caixaLetra.classList.contains('oculto')) {
-        caixaLetra.classList.remove('oculto');
-        e.target.textContent = "Ocultar Letra";
-    } else {
-        caixaLetra.classList.add('oculto');
-        e.target.textContent = "Ler Letra";
-    }
+document.getElementById("btn-letra").addEventListener("click", (e) => {
+  const caixaLetra = document.getElementById("caixa-letra");
+
+  if (caixaLetra.classList.contains("oculto")) {
+    caixaLetra.classList.remove("oculto");
+    e.target.textContent = "Ocultar Letra";
+  } else {
+    caixaLetra.classList.add("oculto");
+    e.target.textContent = "Ler Letra";
+  }
 });

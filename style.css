@@ -363,19 +363,19 @@ audio {
 }
 
 .btn-tema {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #f4f1eb;
-    color: #1a1a1a;
-    border: 1px solid #1a1a1a;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: 'Georgia', serif;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #f4f1eb;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Georgia", serif;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-tema:hover {
@@ -401,6 +401,19 @@ body.dark-mode .btn-tema {
 body.dark-mode .btn-tema:hover {
   background: #e0e0e0;
   color: #121212;
+}
+
+body.dark-mode #input-busca {
+  color: #f4f1eb;
+  border-color: #777;
+}
+
+body.dark-mode #input-busca:focus {
+  border-color: #f4f1eb;
+}
+
+body.dark-mode #input-busca::placeholder {
+  color: #888;
 }
 
 #btn-letra:hover {
